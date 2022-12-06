@@ -18,6 +18,7 @@ import api from "../services/api";
 import { CardPokemonProps } from "../components/Card/CardPokemon";
 import { StoreState } from "../redux";
 import { add, remove } from "../redux/favoriteSlice";
+import { Link } from "react-router-dom";
 
 function Details() {
   const { id } = useParams();
@@ -57,12 +58,6 @@ function Details() {
     getPokemonData();
   }, []);
 
-  const nextPokemon = () => {
-    navigate(`/details/${pokemonData.id + 1}`)
-  }
-  const previousPokemon = () => {
-    navigate(`/details/${pokemonData.id - 1}`)
-  }
 
 
   if (isLoading) {
@@ -93,7 +88,7 @@ function Details() {
             (item) => String(item) === String(id)
           ) ? (
             <div style={{ display: 'flex' }}>
-              <Icon className='fav' src={removeIcon} onClick={handleClickRemove} />
+              <Icon className='fav'src={removeIcon} onClick={handleClickRemove} />
               <ButtonDescription> Remover dos favoritos</ButtonDescription>
             </div>
           ) : (
@@ -103,30 +98,30 @@ function Details() {
             </div>
           )}
         </Card>
-        {pokemonData.id == 1 ? (
-          <div style={{ marginTop: '10%', alignContent: 'end' }}>
-            <a href={`/details/${pokemonData.id + 1}`}>
-              <Icon className="arrow" src={setaDireita} alt="" />
-            </a>
-            <Info>Próximo</Info>
-          </div>
-
+        {pokemonData.id == 1 ? (    
+            <div style={{ marginTop: '10%', alignContent:'end' }}>
+              <Link to={`/details/${pokemonData.id + 1}`}>
+                <Icon className="arrow" src={setaDireita} alt="" />
+              </Link>
+              <Info>Próximo</Info>
+            </div>
+          
         ) : (
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10%' }}>
             <div>
-              <a onClick={previousPokemon}>
+              <Link to={`/details/${pokemonData.id - 1}`}>
                 <Icon className="arrow" src={setaEsquerda} alt="" />
-              </a>
+              </Link>
               <Info>Anterior</Info>
             </div>
             <div>
-              <a onClick={nextPokemon}>
+              <Link to={`/details/${pokemonData.id + 1}`}>
                 <Icon className="arrow" src={setaDireita} alt="" />
-              </a>
+              </Link>
               <Info>Próximo</Info>
             </div>
           </div>
-        )};
+        )}
       </Container>
     </>
   );
