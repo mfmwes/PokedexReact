@@ -11,6 +11,13 @@ export const Container = styled.div`
   
 `;
 
+export const FunctionBox = styled.div `
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10% 
+`
+
+
 export const Image = styled.img`
 height: 600px;
 position: absolute;

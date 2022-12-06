@@ -11,7 +11,7 @@ import setaDireita from '../assets/seta-direita.png'
 import NavBar from "../components/NavBar/NavBar";
 import Badge from "../components/Badge/Badge";
 import { Icon } from "../components/Icon/Icon";
-import { Container, Image, Card, Number, Title, Info, ButtonDescription, } from "./Details.style";
+import { Container, Image, Card, Number, Title, Info, ButtonDescription, FunctionBox} from "./Details.style";
 
 import api from "../services/api";
 
@@ -100,27 +100,27 @@ function Details() {
         </Card>
         {pokemonData.id == 1 ? (    
             <div style={{ marginTop: '10%', alignContent:'end' }}>
-              <Link to={`/details/${pokemonData.id + 1}`}>
+              <a href={`/details/${pokemonData.id + 1}`}>
                 <Icon className="arrow" src={setaDireita} alt="" />
-              </Link>
+              </a>
               <Info>Próximo</Info>
             </div>
           
         ) : (
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10%' }}>
+          <FunctionBox>
             <div>
-              <Link to={`/details/${pokemonData.id - 1}`}>
+              <a href={`/details/${pokemonData.id - 1}`}>
                 <Icon className="arrow" src={setaEsquerda} alt="" />
-              </Link>
+              </a>
               <Info>Anterior</Info>
             </div>
             <div>
-              <Link to={`/details/${pokemonData.id + 1}`}>
+              <a href={`/details/${pokemonData.id + 1}`}>
                 <Icon className="arrow" src={setaDireita} alt="" />
-              </Link>
+              </a>
               <Info>Próximo</Info>
             </div>
-          </div>
+          </FunctionBox>
         )}
       </Container>
     </>
