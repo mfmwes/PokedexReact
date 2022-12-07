@@ -23,7 +23,7 @@ export const LoadingContainer = styled.div `
            
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 428px) {
     
         img {
             height: 300px;
