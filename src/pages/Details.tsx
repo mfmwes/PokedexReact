@@ -11,7 +11,7 @@ import setaDireita from '../assets/seta-direita.png'
 import NavBar from "../components/NavBar/NavBar";
 import Badge from "../components/Badge/Badge";
 import { Icon } from "../components/Icon/Icon";
-import { Container, Image, Card, Number, Title, Info, ButtonDescription, FunctionBox} from "./Details.style";
+import { Container, Image, Card, Number, Title, Info, ButtonDescription, FunctionBox, BadgeContainer} from "./Details.style";
 
 import api from "../services/api";
 
@@ -68,15 +68,14 @@ function Details() {
     <>
       <NavBar hasGoBack />
       <Container>
-        <Card
-          className={`type--${pokemonData.types[0].type.name.toLowerCase()}`}
-        >
+        <Card className={`type--${pokemonData.types[0].type.name.toLowerCase()}`}>
           <Number>#{String(id).padStart(3, "0")}</Number>
           <Title>{pokemonData.name[0].toLocaleUpperCase() + pokemonData.name.substring(1)}</Title>
-
+          <BadgeContainer>
           {pokemonData.types.map((item, index) => {
             return <Badge key={index} name={item.type.name} />;
           })}
+          </BadgeContainer>
 
           <Image
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
@@ -112,13 +111,13 @@ function Details() {
               <a href={`/details/${pokemonData.id - 1}`}>
                 <Icon className="arrow" src={setaEsquerda} alt="" />
               </a>
-              <Info>Anterior</Info>
+              <Info className="previous">Anterior</Info>
             </div>
             <div>
               <a href={`/details/${pokemonData.id + 1}`}>
                 <Icon className="arrow" src={setaDireita} alt="" />
               </a>
-              <Info>Próximo</Info>
+              <Info className="next">Próximo</Info>
             </div>
           </FunctionBox>
         )}

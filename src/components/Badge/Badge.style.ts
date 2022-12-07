@@ -65,6 +65,10 @@ export const Container = styled.span`
 
   :hover {
     filter: brightness(115%) 
-
   }
+  
+  @media only screen and (max-width: 428px) {
+   display: flex;
+}
+
 `;

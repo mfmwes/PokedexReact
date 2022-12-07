@@ -21,7 +21,7 @@ export const CustomLink = styled(Link)<CustomLinkProps>`
   line-height: ${(props) => props.lineheight}px;
   color: ${(props) => props.color};
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 428px) {
      font-size: 18px;
      display: flex;
      
@@ -36,7 +36,7 @@ export const TotalPokemons = styled.span`
   color: ${(props) => props.color};
   margin-right: 2rem;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 428px) {
     margin-right: 0.5rem;
   }
 

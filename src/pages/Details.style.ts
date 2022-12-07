@@ -4,17 +4,22 @@ export const Container = styled.div`
   height: calc(100vh - 4rem - 40px);
   position: relative;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 428px) {
     display: flex;
     flex-direction: column;
+    overflow: hidden;  
 }
   
 `;
 
-export const FunctionBox = styled.div `
+export const BadgeContainer = styled.div`
+  display: flex;
+`
+
+export const FunctionBox = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 10% 
+  margin-top: 10%; 
 `
 
 
@@ -24,7 +29,7 @@ position: absolute;
 left:45%;
 top:-8%;
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 428px) {
   height: 150px;
   position: relative;
   top:5%;
@@ -114,8 +119,8 @@ export const Card = styled.div`
     border-color: #4a90da;
   }
  
-  @media only screen and (max-width: 400px) {
-    height: 85vh;
+  @media only screen and (max-width: 428px) {
+    height: 100vh;
 }
 
 `;
@@ -123,7 +128,7 @@ export const Card = styled.div`
 export const Number = styled.span`
   font-weight: 700;
   font-size: 35px;
-  line-height: 31px;
+  line-height: 12px;
   color: rgba(23, 23, 27, 0.6);
 `;
 
@@ -133,8 +138,8 @@ export const Title = styled.h1`
   line-height: 83px;
   color: #ffffff;
 
-  @media only screen and (max-width: 400px) {
-  font-size: 45px;
+  @media only screen and (max-width: 428px) {
+  font-size: 35px;
 }
 
 `;
@@ -143,7 +148,6 @@ export const Button = styled.button`
   padding: 0.5em 1rem;
 `;
 
-
 export const Info = styled.span`
   margin-top: 25px;
   font-weight: 700;
@@ -151,14 +155,19 @@ export const Info = styled.span`
   line-height: 31px;
   color: rgba(23, 23, 27, 0.6);
   display: block;
+  background-color: #7777;
+  border-radius: 42px;
+  padding: 5 20px;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 428px) {
     margin-bottom: 15px;
 }
 
+&.next,
+&.previous {
+  display: none;
+}
 `;
-
-
 
 export const ButtonDescription = styled.span`
   margin-top: 25px;
@@ -168,10 +177,9 @@ export const ButtonDescription = styled.span`
   color: rgba(23, 23, 27, 0.6);
   display: block;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 428px) {
    display: none;
 }
-
 `;
 
 

@@ -27,6 +27,11 @@ export const StyledIcon = styled.img`
  
   &.fav{
     animation: none;
+    @media only screen and (max-width: 428px) {
+      height: 50px;
+      position: relative;
+      top: 40px;
+    }
   }
   
 
@@ -34,12 +39,18 @@ export const StyledIcon = styled.img`
     background: none !important;
     cursor: pointer;
     animation: none;
-   
+
+    @media only screen and (max-width: 428px) {
+    position: relative;
+    bottom: 100px;
+
+    }
   }
 
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 428px) {
     margin: auto;
+    
 }
   
 `
