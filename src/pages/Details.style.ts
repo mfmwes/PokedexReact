@@ -5,11 +5,11 @@ export const Container = styled.div`
   position: relative;
 
   @media only screen and (max-width: 428px) {
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;  
-}
-  
+    overflow:hidden
+} 
 `;
 
 export const BadgeContainer = styled.div`
@@ -30,10 +30,10 @@ left:45%;
 top:-8%;
 
 @media only screen and (max-width: 428px) {
-  height: 150px;
+  height: 125px;
   position: relative;
   top:5%;
-  left: 15%;
+  left: 25%;
   }
 
 `;
@@ -150,23 +150,24 @@ export const Button = styled.button`
 
 export const Info = styled.span`
   margin-top: 25px;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 24px;
   line-height: 31px;
   color: rgba(23, 23, 27, 0.6);
   display: block;
-  background-color: #7777;
-  border-radius: 42px;
-  padding: 5 20px;
-
+ 
   @media only screen and (max-width: 428px) {
     margin-bottom: 15px;
+    text-align: center;
+    background-color: #7777;
+    border-radius: 42px; 
 }
 
 &.next,
 &.previous {
   display: none;
 }
+
 `;
 
 export const ButtonDescription = styled.span`

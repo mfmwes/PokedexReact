@@ -87,9 +87,9 @@ export const Image = styled.img`
   top: -40px;
   right: 10px;
 
-  @media only screen and (max-width: 375px) {
-    max-height: 110px;
-    top: -20px;
+  @media only screen and (max-width: 428px) {
+    max-height: 130px;
+    top: 15px;
     right: -5px;
   }
 `;

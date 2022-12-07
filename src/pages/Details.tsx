@@ -98,12 +98,14 @@ function Details() {
           )}
         </Card>
         {pokemonData.id == 1 ? (    
-            <div style={{ marginTop: '10%', alignContent:'end' }}>
-              <a href={`/details/${pokemonData.id + 1}`}>
-                <Icon className="arrow" src={setaDireita} alt="" />
-              </a>
-              <Info>Próximo</Info>
-            </div>
+            <FunctionBox>
+              <div>
+                <a href={`/details/${pokemonData.id + 1}`}>
+                  <Icon className="arrow" src={setaDireita} alt="" />
+                </a>
+                <Info className="next">Próximo</Info>
+              </div>
+            </FunctionBox>
           
         ) : (
           <FunctionBox>

@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import 'animate.css'
 
-
-
-
 export const StyledIcon = styled.img`
   height: 50px;
   width: 50px;

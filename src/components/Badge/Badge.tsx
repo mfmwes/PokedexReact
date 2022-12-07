@@ -6,7 +6,7 @@ type BadgeProps = {
 
 function Badge(props: BadgeProps) {
   return (
-    <Container className={"type--" + props.name.toLowerCase()}>
+    <Container className={"type--" + props.name.toLowerCase() + " badge-details" }>
       {props.name}
     </Container>
   );

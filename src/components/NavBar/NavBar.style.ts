@@ -6,6 +6,13 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 428px) {
+     .back {
+      display: none;
+     }
+  }
+ 
 `;
 
 type CustomLinkProps = {
@@ -24,14 +31,13 @@ export const CustomLink = styled(Link)<CustomLinkProps>`
   @media only screen and (max-width: 428px) {
      font-size: 18px;
      display: flex;
-     
+
   }
 
 `;
 
 export const TotalPokemons = styled.span`
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: 700;
   line-height: 1rem;
   color: ${(props) => props.color};
   margin-right: 2rem;

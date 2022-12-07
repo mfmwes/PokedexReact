@@ -69,6 +69,11 @@ export const Container = styled.span`
   
   @media only screen and (max-width: 428px) {
    display: flex;
-}
+   width: 180px;
+   justify-content: center;
 
-`;
+  &.badge-details {
+    width: 285px;
+   }
+  };
+`

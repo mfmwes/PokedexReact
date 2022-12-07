@@ -19,12 +19,12 @@ function NavBar(props: NavBarProps) {
           Pokédex
         </CustomLink>
       </div>
-      <div>
+      <div className="boxxx">
         <TotalPokemons>
           Total de favoritos: {totalPokemons.length}
         </TotalPokemons>
         {props.hasGoBack && (
-          <CustomLink to="/" fontSize={16} lineheight={21} color="#747476">
+          <CustomLink className="back" to="/" fontSize={16} lineheight={21} color="#747476">
             Voltar
           </CustomLink>
         )}
