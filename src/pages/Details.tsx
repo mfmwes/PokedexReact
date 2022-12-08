@@ -87,12 +87,12 @@ function Details() {
             (item) => String(item) === String(id)
           ) ? (
             <div style={{ display: 'flex' }}>
-              <Icon className='fav'src={removeIcon} onClick={handleClickRemove} />
+              <Icon className='fav'src={removeIcon} onClick={handleClickRemove} alt='icone de remover pokemon dos favoritos' />
               <ButtonDescription> Remover dos favoritos</ButtonDescription>
             </div>
           ) : (
             <div style={{ display: 'flex' }}>
-              <Icon className='fav' src={favoriteIcon} onClick={handleClickAdd} />
+              <Icon className='fav' src={favoriteIcon} onClick={handleClickAdd} alt='icone de favoritar pokemon'/>
               <ButtonDescription> Adicionar aos favoritos</ButtonDescription>
             </div>
           )}
@@ -101,7 +101,7 @@ function Details() {
             <FunctionBox>
               <div>
                 <a href={`/details/${pokemonData.id + 1}`}>
-                  <Icon className="arrow" src={setaDireita} alt="" />
+                  <Icon className="arrow" src={setaDireita} alt="icone pra avançar para o próximo pokemon" />
                 </a>
                 <Info className="next">Próximo</Info>
               </div>
@@ -111,13 +111,13 @@ function Details() {
           <FunctionBox>
             <div>
               <a href={`/details/${pokemonData.id - 1}`}>
-                <Icon className="arrow" src={setaEsquerda} alt="" />
+                <Icon className="arrow" src={setaEsquerda} alt="ícone para retornar para o pokemon anterior" />
               </a>
               <Info className="previous">Anterior</Info>
             </div>
             <div>
               <a href={`/details/${pokemonData.id + 1}`}>
-                <Icon className="arrow" src={setaDireita} alt="" />
+                <Icon className="arrow" src={setaDireita} alt="icone pra avançar para o próximo pokemon" />
               </a>
               <Info className="next">Próximo</Info>
             </div>

@@ -21,7 +21,6 @@ export const FunctionBox = styled.div`
   margin-top: 10%; 
 `
 
-
 export const Image = styled.img`
 height: 600px;
 position: absolute;
